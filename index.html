@@ -626,6 +626,79 @@
             color: var(--text-light);
         }
 
+        /* Industries Section */
+        .industries-section {
+            padding: 100px 0;
+            background: var(--we-white);
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+        }
+
+        .industry-card {
+            position: relative;
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .industry-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .industry-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .industry-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(12, 35, 64, 0.9) 0%, transparent 60%);
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            transition: background 0.3s;
+        }
+
+        .industry-card:hover .industry-card-overlay {
+            background: linear-gradient(to top, rgba(0, 51, 161, 0.9) 0%, rgba(0, 51, 161, 0.3) 100%);
+        }
+
+        .industry-card-content h4 {
+            color: var(--we-white);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .industry-card-content p {
+            color: var(--we-light-blue);
+            font-size: 12px;
+            font-weight: 300;
+        }
+
+        @media (max-width: 1024px) {
+            .industries-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .industries-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .industry-card:last-child {
+                grid-column: span 2;
+            }
+        }
+
         /* Why Section - Using Vibrant Background */
         .why-section {
             padding: 100px 0;
@@ -1313,6 +1386,64 @@
                     <div class="video-info">
                         <h4>Customer Stories</h4>
                         <p>Hear from brands who trust World Emblem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Industries We Serve</div>
+                <h2>Emblems That Perform in Every Environment</h2>
+                <p>From fashion runways to front lines, our patches and emblems meet the demands of every industry.</p>
+            </div>
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <img src="use-military.jpg" alt="Military patches">
+                    <div class="industry-card-overlay">
+                        <div class="industry-card-content">
+                            <h4>Military</h4>
+                            <p>Durable tactical patches</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="industry-card">
+                    <img src="use-firefighter.jpg" alt="First responder patches">
+                    <div class="industry-card-overlay">
+                        <div class="industry-card-content">
+                            <h4>First Responders</h4>
+                            <p>Fire, EMS & Law Enforcement</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="industry-card">
+                    <img src="use-workwear.jpg" alt="Workwear branding">
+                    <div class="industry-card-overlay">
+                        <div class="industry-card-content">
+                            <h4>Workwear</h4>
+                            <p>Corporate & industrial</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="industry-card">
+                    <img src="use-industrial.jpg" alt="Industrial uniforms">
+                    <div class="industry-card-overlay">
+                        <div class="industry-card-content">
+                            <h4>Industrial</h4>
+                            <p>Heavy-duty applications</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="industry-card">
+                    <img src="use-fashion.jpg" alt="Fashion patches">
+                    <div class="industry-card-overlay">
+                        <div class="industry-card-content">
+                            <h4>Fashion</h4>
+                            <p>Footwear & apparel</p>
+                        </div>
                     </div>
                 </div>
             </div>

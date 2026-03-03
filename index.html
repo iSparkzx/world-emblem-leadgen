@@ -116,9 +116,17 @@
             display: flex;
             align-items: center;
             padding: 120px 0 80px;
-            background: var(--we-white);
+            background: url('hero-bg.jpg') center center / cover no-repeat;
             position: relative;
             overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(12, 35, 64, 0.92) 0%, rgba(12, 35, 64, 0.85) 50%, rgba(12, 35, 64, 0.75) 100%);
+            z-index: 0;
         }
 
         /* Dynamic Symbol Background */
@@ -129,8 +137,9 @@
             transform: translateY(-50%);
             width: 70%;
             height: 120%;
-            opacity: 0.08;
+            opacity: 0.06;
             pointer-events: none;
+            z-index: 1;
         }
 
         .hero-dynamic-symbol svg {
@@ -144,14 +153,15 @@
             gap: 80px;
             align-items: center;
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: var(--we-dark-blue);
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.25);
             color: var(--we-white);
             padding: 8px 20px;
             border-radius: 4px;
@@ -160,20 +170,21 @@
             letter-spacing: 0.05em;
             text-transform: uppercase;
             margin-bottom: 24px;
+            backdrop-filter: blur(10px);
         }
 
         .hero-text h1 {
             font-size: clamp(40px, 5vw, 56px);
             font-weight: 600;
             margin-bottom: 24px;
-            color: var(--we-dark-blue);
+            color: var(--we-white);
             letter-spacing: -0.02em;
         }
 
         .hero-text .lead {
             font-size: 17px;
             font-weight: 300;
-            color: var(--text-light);
+            color: var(--we-light-blue);
             margin-bottom: 40px;
             max-width: 520px;
             line-height: 1.8;
@@ -185,7 +196,7 @@
             gap: 32px;
             margin-top: 48px;
             padding-top: 40px;
-            border-top: 1px solid rgba(0, 51, 161, 0.15);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
         }
 
         .stat {
@@ -195,7 +206,7 @@
         .stat-number {
             font-size: 42px;
             font-weight: 200;
-            color: var(--we-primary-blue);
+            color: var(--we-celeste);
             line-height: 1;
             letter-spacing: -0.02em;
         }
@@ -203,7 +214,7 @@
         .stat-label {
             font-size: 13px;
             font-weight: 400;
-            color: var(--text-light);
+            color: var(--we-light-blue);
             margin-top: 8px;
         }
 

@@ -441,6 +441,85 @@
             fill: var(--we-primary-blue);
         }
 
+        /* Manufacturing Showcase */
+        .showcase-section {
+            padding: 0;
+            position: relative;
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 500px;
+        }
+
+        .showcase-image {
+            background-size: cover;
+            background-position: center;
+            min-height: 500px;
+        }
+
+        .showcase-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px 80px;
+            background: var(--we-dark-blue);
+        }
+
+        .showcase-content h2 {
+            font-size: clamp(28px, 3vw, 40px);
+            color: var(--we-white);
+            margin-bottom: 20px;
+        }
+
+        .showcase-content p {
+            font-size: 16px;
+            font-weight: 300;
+            color: var(--we-light-blue);
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+
+        .showcase-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 20px;
+        }
+
+        .showcase-stat {
+            border-left: 3px solid var(--we-celeste);
+            padding-left: 16px;
+        }
+
+        .showcase-stat-number {
+            font-size: 32px;
+            font-weight: 200;
+            color: var(--we-white);
+            line-height: 1;
+        }
+
+        .showcase-stat-label {
+            font-size: 13px;
+            color: var(--we-light-blue);
+            margin-top: 4px;
+        }
+
+        @media (max-width: 1024px) {
+            .showcase-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .showcase-content {
+                padding: 48px 32px;
+            }
+
+            .showcase-image {
+                min-height: 300px;
+            }
+        }
+
         /* Video Section */
         .video-section {
             padding: 100px 0;
@@ -502,6 +581,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            background-size: cover;
+            background-position: center;
         }
 
         .play-button {
@@ -1163,6 +1244,35 @@
         </div>
     </section>
 
+    <!-- Manufacturing Showcase Section -->
+    <section class="showcase-section">
+        <div class="showcase-grid">
+            <div class="showcase-image" style="background-image: url('promo-facility.jpg');"></div>
+            <div class="showcase-content">
+                <h2>In-House Manufacturing You Can Trust</h2>
+                <p>Unlike competitors who rely on overseas facilities, World Emblem manufactures all emblems in-house across North America. This means faster turnarounds, tighter quality control, and a team that's accountable to you.</p>
+                <div class="showcase-stats">
+                    <div class="showcase-stat">
+                        <div class="showcase-stat-number">9</div>
+                        <div class="showcase-stat-label">Facilities Worldwide</div>
+                    </div>
+                    <div class="showcase-stat">
+                        <div class="showcase-stat-number">1M+</div>
+                        <div class="showcase-stat-label">Sq Ft Manufacturing</div>
+                    </div>
+                    <div class="showcase-stat">
+                        <div class="showcase-stat-number">3,200+</div>
+                        <div class="showcase-stat-label">Embroidery Heads</div>
+                    </div>
+                    <div class="showcase-stat">
+                        <div class="showcase-stat-number">0</div>
+                        <div class="showcase-stat-label">Overseas Delays</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Video Section -->
     <section class="video-section">
         <div class="container">
@@ -1173,7 +1283,7 @@
             </div>
             <div class="video-grid">
                 <div class="video-card">
-                    <div class="video-thumb">
+                    <div class="video-thumb" style="background-image: url('promo-facility.jpg');">
                         <div class="play-button">
                             <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                         </div>
@@ -1184,7 +1294,7 @@
                     </div>
                 </div>
                 <div class="video-card">
-                    <div class="video-thumb">
+                    <div class="video-thumb" style="background-image: url('promo-embroidery.jpg');">
                         <div class="play-button">
                             <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                         </div>
@@ -1195,7 +1305,7 @@
                     </div>
                 </div>
                 <div class="video-card">
-                    <div class="video-thumb">
+                    <div class="video-thumb" style="background-image: url('promo-worker.jpg');">
                         <div class="play-button">
                             <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                         </div>

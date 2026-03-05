@@ -498,38 +498,13 @@
             background: var(--we-primary-dark);
         }
 
-        .video-wrapper img {
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-        }
-
-        .video-play-btn {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
-            background: var(--we-white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .video-play-btn:hover {
-            transform: translate(-50%, -50%) scale(1.1);
-        }
-
-        .video-play-btn svg {
-            width: 30px;
-            height: 30px;
-            fill: var(--we-primary);
-            margin-left: 4px;
+            border: none;
         }
 
         .video-content h2 {
@@ -1196,10 +1171,17 @@
         <div class="container">
             <div class="video-container">
                 <div class="video-wrapper">
-                    <img src="promo-facility.jpg" alt="World Emblem Facility">
-                    <div class="video-play-btn">
-                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        src="https://www.youtube.com/embed/kc_4TSh6B2o?si=oDJybzwWXqFt2l-v" 
+                        title="World Emblem Video" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                    </iframe>
                 </div>
                 <div class="video-content">
                     <h2>See Why Brands Choose Us</h2>
